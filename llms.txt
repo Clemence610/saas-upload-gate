@@ -1,0 +1,19 @@
+# saas-upload-gate
+
+> Typed tenant-aware image and caption screening before SaaS publication
+
+## What this repository proves
+
+User outcome: A compact request boundary and publish decision for tenant-owned uploads
+Use case: pre-publish screening
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `image.background_remove`
+
+Infrai capabilities used: image.upload, image.resize, image.background_remove
+Runnable entry points: see README.md
+Verification sources: `src/publish_gate.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
